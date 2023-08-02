@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 on:
-  workflow-dispatch:
+  workflow_dispatch:
   push:
     branches:
       - develop # Change this to your desired deployment branch
