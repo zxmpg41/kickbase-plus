@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 on:
-  workflow_dispatch:
+  workflow-dispatch:
   push:
     branches:
       - develop # Change this to your desired deployment branch
@@ -23,8 +23,8 @@ jobs:
       - name: Build Vue App
         run: npm run build
 
+      - name: Install GitHub Pages Deploy Action
+        run: npm install -g github-pages-deploy-action
+
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./dist # Change this to your Vue app's build output directory
+        run: github-pages-deploy-action --build-dir ./dist --branch gh-pages --no-history --force
