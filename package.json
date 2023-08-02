@@ -7,7 +7,9 @@
     "serve": "vue-cli-service serve --port 3200",
     "prod": "vue-cli-service build",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docker-build": "docker build -t kickbase_plus .",
+    "docker-run": "docker run -p 3030:80 kickbase_plus"
   },
   "dependencies": {
     "@chenfengyuan/vue-number-input": "^1.2.1",
