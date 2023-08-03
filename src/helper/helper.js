@@ -11,14 +11,14 @@ const nextMatch = (matches, player) => {
           abbr: match.t2.s,
           name: match.t2.n,
           id: match.t2.i,
-          img: '/assets/teams/' + match.t2.i + '.png',
+          img: getBundesligaClubImageUrlById(match.t2.i),
         }
       } else if (match.t2 && match.t2.i === player.teamId) {
         m = {
           abbr: match.t1.s,
           name: match.t1.n,
           id: match.t1.i,
-          img: '/assets/teams/' + match.t1.i + '.png',
+          img: getBundesligaClubImageUrlById(match.t1.i),
         }
       }
     })
@@ -46,7 +46,13 @@ const getPositionWording = (positionId) => {
 }
 
 const getBundesligaClubImageUrlById = (id) => {
-  return '/assets/teams/' + id + '.png'
+  return (
+    window.location.origin +
+    process.env.BASE_URL +
+    '/assets/teams/' +
+    id +
+    '.png'
+  )
 }
 
 const sleep = (ms) => {
