@@ -49,7 +49,7 @@ const getBundesligaClubImageUrlById = (id) => {
   return (
     window.location.origin +
     process.env.BASE_URL +
-    '/assets/teams/' +
+    'assets/teams/' +
     id +
     '.png'
   )
