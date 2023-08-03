@@ -73,18 +73,10 @@
     "last 2 versions"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/fabfischer/kickbase-plus#readme",
-  "bugs": {
-    "url": "https://github.com/fabfischer/kickbase-plus/issues"
-  },
   "keywords": [
     "kickbase",
     "api"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/fabfischer/kickbase-plus.git"
-  },
   "author": "Fabian Fischer",
   "contributors": [
     {
